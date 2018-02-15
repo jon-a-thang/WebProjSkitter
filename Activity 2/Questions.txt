@@ -1,0 +1,5 @@
+# Activity 2 Questions
+# Jonathan Jang & Benajamin Greeman
+
+1.) What Web Application Security mechanisms are involved in your topology? What security mechanisms would ideally be involved?
+2.) What testing framework did you choose and why?
