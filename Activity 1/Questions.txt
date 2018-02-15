@@ -1,0 +1,7 @@
+# Activity 2 Questions
+# Jonathan Jang & Benajamin Greeman
+
+1.) What is the URL of your Github project?
+2.) How did you breakup your projects and what are the security ramifications?
+3.) How did you choose to break down your milestones into various issues (tasks)?
+4.) How do you ensure that after each issue/milestone that security has been verified? How would you identify such issues in an ideal environment?
