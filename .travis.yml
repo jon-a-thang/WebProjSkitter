@@ -1,3 +1,10 @@
-after_script: # here's a build step block
+language: python
+python:
+- "2.7"
+- "3.5"
+script: 
+- "python travis_tester.py"
+
+after_script:
 - echo "Created travisyml file"
 - echo "PASS"
