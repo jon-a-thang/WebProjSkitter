@@ -2,4 +2,6 @@
 # Jonathan Jang & Benajamin Greeman
 
 1.) What Web Application Security mechanisms are involved in your topology? What security mechanisms would ideally be involved?
+	In our topology, SAML is used to authenticate users. Ideally, the site would also have an SSL certificate to ensure privacy.
 2.) What testing framework did you choose and why?
+	We have chosen Locust because Python is easier to work with than Java.
