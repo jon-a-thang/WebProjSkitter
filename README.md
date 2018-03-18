@@ -1,2 +1,2 @@
 # WebProjSkitter
-developing a heavily user-centric web application
+Developing a heavily user-centric web application called Skitter
