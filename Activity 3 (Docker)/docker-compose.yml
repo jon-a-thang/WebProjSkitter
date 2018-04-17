@@ -1,0 +1,37 @@
+version: '3'
+
+services:
+  phpnginxone:
+    container_name: phpnginxone
+    build: ./phpnginxone
+    depends_on:
+      - nginxproxy
+  phpnginxtwo:
+    container_name: phpnginxtwo
+    build: ./phpnginxtwo
+    depends_on:
+      - nginxproxy
+  nginxproxy:
+    container_name: nginxproxy
+    build: ./nginxproxy
+    ports:
+      - 80:80
+      - 443:443
+    depends_on:
+      - cfsslcert
+      - db
+  db:
+    container_name: db
+    image: mysql
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=skitterdb_pass
+    ports:
+      - 3306:3306
+    volumes:
+      - ./db_script/skitter.sql:/docker-entrypoint-initdb.d/skitter.sql
+  cfsslcert:
+    container_name: cfsslcert
+    build: ./cfsslcert
+    ports:
+      - 8888:8888
