@@ -9,14 +9,14 @@
 		<!--<img id="skit_welcome" src="images/skit_welcome.png" width="100%">-->
 		<h1>Welcome to Skitter!</h1>
 
-		<form action="signup.html">
+		<form action="signup.php">
 			<p>New? Sign up to join us!</p>
 			<div class="container">
 		    	<button type="submit">Register</button>
 			</div>
 		</form>
 
-		<form action="home.html">
+		<form action="home.php">
 			<p>Not New? Go ahead and Log-In!</p>
 			<div class="container">
 		  		<label for="uname"><b>Username:</b></label>

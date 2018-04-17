@@ -22,11 +22,11 @@ USE skitter_jang;
 --
 -- Table structure for table "skits"
 --
-CREATE TABLE IF NOT EXISTS 'skits' (
-	'skit_id' int(11) NOT NULL AUTO_INCREMENT,
-	'user_id_from' int(11) NOT NULL,
-	'text' text NOT NULL,
-	PRIMARY KEY ('skit_id')
+CREATE TABLE IF NOT EXISTS `skits` (
+	`skit_id` int(11) NOT NULL AUTO_INCREMENT,
+	`user_id_from` int(11) NOT NULL,
+	`text` text NOT NULL,
+	PRIMARY KEY (`skit_id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=28 ;
 
 -- --------------------------------------------------------
@@ -48,12 +48,12 @@ CREATE TABLE IF NOT EXISTS 'skits' (
 --
 -- Table structure for table "profiles"
 --
-CREATE TABLE IF NOT EXISTS 'profiles' (
-	'profile_id' int(11) NOT NULL AUTO_INCREMENT,
-	'user_id' int(11) NOT NULL,
-	'picture_url' varchar(255) NOT NULL,
-	'following' text NOT NULL,
-	PRIMARY KEY ('profile_id')
+CREATE TABLE IF NOT EXISTS `profiles` (
+	`profile_id` int(11) NOT NULL AUTO_INCREMENT,
+	`user_id` int(11) NOT NULL,
+	`picture_url` varchar(255) NOT NULL,
+	`following` text NOT NULL,
+	PRIMARY KEY (`profile_id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=15 ;
 
 -- --------------------------------------------------------
@@ -61,25 +61,25 @@ CREATE TABLE IF NOT EXISTS 'profiles' (
 --
 -- Inserting "profiles" into table "profiles"
 --
-INSERT INTO 'profiles'
-('profile_id', 'user_id', 'picture_url', 'following') VALUES
-(1, 1, 'images/default.jpg', '1')
-(2, 2, 'images/default.jpg', '2')
-(3, 3, 'images/default.jpg', '3')
-(4, 4, 'images/default.jpg', '4');
+--INSERT INTO 'profiles'
+--('profile_id', 'user_id', 'picture_url', 'following') VALUES
+--(1, 1, 'images/default.jpg', '1')
+--(2, 2, 'images/default.jpg', '2')
+--(3, 3, 'images/default.jpg', '3')
+--(4, 4, 'images/default.jpg', '4');
 
 -- --------------------------------------------------------
 
 --
 -- Table structure for table "users"
 --
-CREATE TABLE IF NOT EXISTS 'users' (
-	'user_id' int(11) NOT NULL AUTO_INCREMENT,
-	'email' varchar(64) NOT NULL,
+CREATE TABLE IF NOT EXISTS `users` (
+	`user_id` int(11) NOT NULL AUTO_INCREMENT,
+	`email` varchar(64) NOT NULL,
 	--'password' varchar(64) NOT NULL,
- 	'firstname' varchar(25) NOT NULL,
-	'lastname' varchar(25) NOT NULL,
-	PRIMARY KEY ('user_id')
+ 	`firstname` varchar(25) NOT NULL,
+	`lastname` varchar(25) NOT NULL,
+	PRIMARY KEY (`user_id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=18 ;
 
 -- --------------------------------------------------------
