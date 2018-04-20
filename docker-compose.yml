@@ -1,16 +1,14 @@
 version: '3'
 
 services:
-  phpnginxone:
-    container_name: phpnginxone
-    build: ./phpnginxone
-    depends_on:
-      - nginxproxy
-  phpnginxtwo:
-    container_name: phpnginxtwo
-    build: ./phpnginxtwo
-    depends_on:
-      - nginxproxy
+  phpnginx:
+  #  container_name: phpnginxweb
+    build: ./phpnginx
+
+  #phpnginxtwo:
+  #  container_name: phpnginxtwo
+  #  build: ./phpnginxtwo
+
   nginxproxy:
     container_name: nginxproxy
     build: ./nginxproxy
@@ -20,6 +18,8 @@ services:
     depends_on:
       - cfsslcert
       - db
+      - phpnginx
+
   db:
     container_name: db
     image: mysql
@@ -30,6 +30,13 @@ services:
       - 3306:3306
     volumes:
       - ./db_script/skitter.sql:/docker-entrypoint-initdb.d/skitter.sql
+
+  #elasticsearch:
+  #  image: docker.elastic.co/elasticsearch/elasticsearch-oss:6.2.3
+  #  environment:
+  #    ES_JAVA_OPTS: "-Xmx128m -Xms128m"
+  #    discovery.type: "single-node"
+
   cfsslcert:
     container_name: cfsslcert
     build: ./cfsslcert
