@@ -1,6 +1,7 @@
 <?php
+	//setcookie("SKIT_SESSION", $_COOKIE["SKIT_SESSION"], 0);
 	session_start();
+	session_unset();
 	session_destroy();
-
-	echo "<script>window.location.href = '/index.php';</script>";
+	echo "<script>location.assign('index.php');</script>";
 ?>

@@ -2,9 +2,11 @@
 <html>
 	<head>
 		<link rel="stylesheet" type"text/css" href="skitterstyle.css" />
-		<title>Skitter</title>
+		<title>Welcome to Skitter</title>
 		<meta charset="utf-8">
-		<?php 
+		<?php
+			ini_set("request_order", "GPC");
+
 			include("common.php"); 
 
 			if(isset($_SESSION['login'])){
@@ -38,4 +40,4 @@
 			</div>
 		</form>
 	</body>
-</html>	
+</html>

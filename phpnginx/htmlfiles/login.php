@@ -9,32 +9,33 @@
 				die("Error - Issue executing prepared statement: " . mysqli_error($mysqli));
 			}
 			if($res = $stmt->get_result()){
-
 				$row = $res->fetch_assoc();
 				if($res->num_rows != 1){
-					die("False - Username or password was invalid");
+					die("Username or Password --> Invalid");
 				}
 				if($password === $row['password']){
-					session_unset(); 
-					session_destroy();
-					$sess_id = session_start();
-					session_regenerate_id(true);
+					//session_unset(); 
+					//session_destroy();
+
+					session_start();
+					//session_regenerate_id(true);
+
 					$_SESSION['login'] = ['born' => time(),'ip' => $_SERVER['REMOTE_ADDR'],'valid' => true];
 					$_SESSION['user_id'] = $row['user_id'];
-					#die("True - login successful");
+
 					header("Content-Type: text/html");
 					echo "<script>location.assign('home.php');</script>";
-					die("True - login successful");
+					die("Logged-In!!");
 				}else{
-					die('False - Username or password was invalid"');
+					die("Username or Password --> Invalid");
 				}
 			}else{
-				die("Error - Getting results: " . mysqli_error($mysqli));
+				die(mysqli_error($mysqli));
 			}
 		}else{
-			die("Error - Issue binding prepared statement: " . mysqli_error($mysqli));
+			die(mysqli_error($mysqli));
 		}
 	}else{
-		die("Error - Issue preparing statement: " . mysqli_error($mysqli));
+		die(mysqli_error($mysqli));
 	}
 ?>

@@ -26,11 +26,5 @@
 		    	<button type="submit">Create Account</button>
 			</div>
 		</form>
-
-		<div action="index.php" method="post">
-			<br>
-			<label for="return_index"><b>Click to: </b></label>
-			<button type="submit">Sign-In!</button>
-		</div>
 	</body>
 </html>	
