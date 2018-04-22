@@ -2,13 +2,6 @@
 	/* session_start();
 	include_once "common.php";
 
-	//$params = array('fname','lname','email','psw');
-
-	//$fname = $_POST['fname'];
-	//$lname = $_POST['lname'];
-	//$email = $_POST['email'];
-	//$pass = $_POST['psw'];
-
 	//$_SESSION['login'];
 	$idOfUser = $_SESSION['user_id'];
 	//$email = $_POST['login_email'];

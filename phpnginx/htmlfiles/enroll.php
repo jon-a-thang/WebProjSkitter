@@ -1,8 +1,6 @@
 <?php
 	include_once "common.php";
 
-	$params = array('fname','lname','email','psw');
-
 	$fname = $_POST['fname'];
 	$lname = $_POST['lname'];
 	$email = $_POST['email'];
